@@ -7,14 +7,14 @@ library(tidyverse) # We call it to use the airquality database
 all_db<-airquality$Temp
 
 # These are the Statistics Hypothesis
-# H0: ??2 = 90
-# Ha: ??2 < 90
-# ??20 = 90
+# H0: sigma^2 = 90
+# Ha: sigma^2 < 90
+# sigma^2_o = 90
 # We'll use the Hypothesis and the Lower Tail Reject Region
 var_o <- 90
 
 # We know that the Reject Region (R.R.) at 5% is given by:
-# {X2-score < X2}
+# R.R = {X2-score < X2}
 # where X2 is the quantil (alpha) from the lower tail
 
 
@@ -41,5 +41,5 @@ if(X2_estadistico < X2) {
   "Se acepta H0"
 }
 
-# R.R. = {151.3098 < 188.0263} -> 151.3098 does belong to R.R
+# R.R. = {151.3098 < 188.0263} -> 151.3098 does BELONG to R.R
 # There's sufficient evidence to conclude Ha
